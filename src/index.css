@@ -56,19 +56,57 @@ body {
   transition-delay: 0.5s;
   width: 27px;
 }
-.toggle-btn input[type=checkbox]:checked+label:before {
+.toggle-btn input[type="checkbox"]:checked + label:before {
   background-color: #f8ffaf;
   transform: translateX(45px);
 }
-.toggle-btn input[type=checkbox]:checked+label {
+.toggle-btn input[type="checkbox"]:checked + label {
   background-color: #111;
   transform: rotate(1turn);
 }
-.dark{
+.dark {
   --bg-color: #003950;
   --alt-bg-color: #0000004d;
   --font-color: #fff;
   --alt-font-color: #222;
   --primary-color: #008e9f;
   --secondary-color: #00e4ff;
+}
+.container {
+  background: var(--alt-bg-color);
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 #00000045;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 30px;
+  text-align: center;
+  width: 80%;
+}
+.container .header {
+  grid-gap: 1%;
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 70% 29%;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.header input{
+  background-color: #eee;
+    border: none;
+    outline: none;
+    padding: 13px 20px;
+}
+.header input, button{
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: .9rem;
+}
+button{
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--font-color);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px 30px;
+  transition: all .3s ease;
 }
